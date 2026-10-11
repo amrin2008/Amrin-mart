@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrin Mart | Simple Online Store</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">Amrin Mart</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#cart">Cart</a>
+      <button class="cart-pill" onclick="document.getElementById('cart').scrollIntoView({behavior:'smooth'})">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <h1>Little things.<br>Lovely finds.</h1>
+        <p>Discover everyday favourites at prices you'll love. Browse our collection and add your picks to the cart.</p>
+        <a href="#products"><button class="cart-pill">Shop now</button></a>
+      </div>
+      <div class="emoji" aria-hidden="true">🛍️</div>
+    </section>
+
+    <section class="shop" id="products">
+      <div class="section-head">
+        <h2>Featured products</h2>
+        <input class="search" id="search" type="search" placeholder="Search products..." aria-label="Search products">
+      </div>
+      <div class="products" id="product-list"></div>
+    </section>
+
+    <section class="cart" id="cart">
+      <h2>Your shopping cart</h2>
+      <div id="cart-items"><p class="empty">Your cart is empty. Add something you love!</p></div>
+      <div class="total">Total: ₹<span id="cart-total">0</span></div>
+      <button class="checkout" onclick="checkout()">Proceed to checkout</button>
+      <p id="checkout-message" role="status"></p>
+    </section>
+  </main>
+
+  <footer>© 2026 Amrin Mart · Made for a simple shopping experience</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
